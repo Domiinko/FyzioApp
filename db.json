@@ -1,0 +1,85 @@
+{
+  "RingData": [
+    {
+      "id": 0,
+      "name": "Adam Carter",
+      "work": "Unilogic",
+      "email": "adam.carter@unilogic.com",
+      "dob": "1978",
+      "address": "83 Warner Street",
+      "city": "Boston",
+      "optedin": true
+    },
+    {
+      "id": 1,
+      "name": "Leanne Brier",
+      "work": "Connic",
+      "email": "leanne.brier@connic.org",
+      "dob": "1987",
+      "address": "9 Coleman Avenue",
+      "city": "Toronto",
+      "optedin": false
+    },
+    {
+      "id": 2,
+      "name": "jozo Brier",
+      "work": "asdada",
+      "email": "leasaanne.brier@connic.org",
+      "dob": "4564",
+      "address": "9 Coleman Avenue",
+      "city": "Nitra",
+      "optedin": false
+    }
+  ],
+  "BandData": [
+    {
+      "best": {
+        "total": {
+          "distance": {
+            "date": "2022-11-29",
+            "value": 6.88692
+          },
+          "floors": {
+            "date": "2022-11-29",
+            "value": 7.000000010640001
+          },
+          "steps": {
+            "date": "2022-11-29",
+            "value": 9470
+          }
+        },
+        "tracker": {
+          "distance": {
+            "date": "2022-11-29",
+            "value": 6.88692
+          },
+          "floors": {
+            "date": "2022-11-29",
+            "value": 7.000000010640001
+          },
+          "steps": {
+            "date": "2022-11-29",
+            "value": 9470
+          }
+        }
+      },
+      "lifetime": {
+        "total": {
+          "activeScore": -1,
+          "caloriesOut": -1,
+          "distance": 34.31,
+          "floors": 93,
+          "steps": 46039
+        },
+        "tracker": {
+          "activeScore": -1,
+          "caloriesOut": -1,
+          "distance": 34.31,
+          "floors": 93,
+          "steps": 46039
+        }
+      },
+      "id": 1
+    }
+  ]
+}

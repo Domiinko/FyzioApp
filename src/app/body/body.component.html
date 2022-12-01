@@ -1,4 +1,50 @@
-<p>body works!</p>
-<h1>FitBit API Demo</h1>
 <!--<script src="./src/app/serviceApi/service_api.ts"></script>-->
-<p> {{fyzioData | json}} </p>
+<!--<p> {{fyzioData | json}} </p>-->
+
+<tbody>
+<table>
+  <tr class="first_line">
+    <th>ID</th>
+    <th>Full Name</th>
+    <th>City</th>
+  </tr>
+<ng-container *ngFor="let i of ((ringPhysioData$ | async))">
+  <tr>
+    <td>{{i.id}}</td>
+    <td>{{i.name}}</td>
+    <td>{{i.city}}</td>
+  </tr>
+</ng-container>
+</table>
+</tbody>
+
+<hr>
+
+<tbody>
+<table>
+  <tr class="first_line">
+    <th>Činnosť</th>
+    <th>Hodnota</th>
+    <th>Dátum</th>
+  </tr>
+
+  <ng-container *ngFor="let j of ((bandPhysioData$ | async))">
+    <tr>
+      <td>{{j.best.total.distance.date | json}}</td>
+      <td>{{j.best.total.distance.date | json}}</td>
+      <td>{{j.best.total.distance.date | json}}</td>
+    </tr>
+  </ng-container>
+
+
+
+</table>
+</tbody>
+
+
+<div>{{(bandPhysioData$ | json)}}</div>
+<hr>
+<div> {{(fyzioData | json)}} </div>
+<!--<div>{{ (bandPhysioData$ | json) }}</div>-->
+
+
