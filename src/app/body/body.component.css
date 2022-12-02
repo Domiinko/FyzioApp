@@ -1,33 +1,35 @@
 
-
-
 .first_line{
   background: rgba(147, 112, 219, 0.33);
+  position: relative;
+  border-radius: 5px;
 }
 table{
   position: relative;
-  width: 80vw;
+  width: 30vw;
   border-collapse: collapse;
   align-items: center;
   background: rgba(147, 112, 219, 0.34);
-  border-radius: 15px;
-  z-index: 2;
+  border-radius: 5px;
+  /*z-index: 2;*/
 
 }
 tbody{
   position: relative;
   text-align: center;
-  left: 10%;
+  left: 30%;
 }
 td,th{
   z-index: 1;
   color:black;
-
 }
 th{
   font-weight: bolder;
 }
-div{
-  color : red;
-  font-weight: bolder;
+.title{
+  text-align: center;
+}
+.columns is-mobile{
+  position: relative;
+  top:50px;
 }
