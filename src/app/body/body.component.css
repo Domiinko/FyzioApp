@@ -1,4 +1,6 @@
-
+.stay{;
+  background-color: white;
+}
 .first_line{
   background: rgba(147, 112, 219, 0.33);
   position: relative;
@@ -6,7 +8,7 @@
 }
 table{
   position: relative;
-  width: 30vw;
+  width: 50vmin;
   border-collapse: collapse;
   align-items: center;
   background: rgba(147, 112, 219, 0.34);
@@ -17,7 +19,7 @@ table{
 tbody{
   position: relative;
   text-align: center;
-  left: 30%;
+
 }
 td,th{
   z-index: 1;
@@ -29,7 +31,16 @@ th{
 .title{
   text-align: center;
 }
-.columns is-mobile{
-  position: relative;
-  top:50px;
+.card{
+  background-color: rgba(255, 255, 255, 0.5);
+  /*height: 30vh;*/
+  height: 30vmin;
+
 }
+.content{
+  color:black;
+}
+/*.columns is-mobile{*/
+/*  position: relative;*/
+/*  top:50px;*/
+/*}*/

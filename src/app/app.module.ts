@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { FooterComponent } from './footer/footer.component';
+import { SliderComponent } from './slider/slider.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { FooterComponent } from './footer/footer.component';
     HeaderComponent,
     BodyComponent,
     WelcomeComponent,
-    FooterComponent
+    FooterComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
