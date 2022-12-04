@@ -6,7 +6,7 @@
       <app-slider></app-slider>
     </div>
     <div class="column">
-      <div class="card" style="width: 50vmin; text-align: right" >
+      <div class="card" style="width: 50vmin; text-align: left" >
         <header class="card-header">
           <p class="card-header-title">
            Inteligentné zariadenia
@@ -73,24 +73,24 @@
         <th class="title"></th>
       </tr>
       <tr class="first_line">
-        <th>Činnosť</th>
-        <th>Hodnota</th>
         <th>Dátum</th>
+        <th>Hodnota tepu srdca</th>
+        <th>Činnosť</th>
       </tr>
 
-      <ng-container *ngFor="let i of (bandActivitiesData$ | async)?.activities">
+      <ng-container *ngFor='let i of (bandActivitiesData$ | async)?.["activities-heart"]'>
 
-        <tr>{{ i?.activityName }}
-          <td>{{ i?.activityName }} </td>
-          <td>{{ i?.activityName }} </td>
+        <tr>{{ i['dateTime'] }}
+          <td>{{ i['value'].restingHeartRate }} </td>
+          <td> Odpočinok </td>
         </tr>
-        <tr>{{ i?.activityName }}
-          <td>{{ i?.activityName }} </td>
-          <td>{{ i?.activityName }} </td>
+        <tr>{{ i['dateTime'] }}
+          <td>{{ i['value'].restingHeartRate }} </td>
+          <td>Odpočinok </td>
         </tr>
-        <tr>{{ i?.activityName }}
-          <td>{{ i?.activityName }} </td>
-          <td>{{ i?.activityName }} </td>
+        <tr>{{ i['dateTime'] }}
+          <td>{{ i['value'].restingHeartRate }} </td>
+          <td>Odpočinok </td>
         </tr>
 
       </ng-container>
@@ -111,19 +111,19 @@
         <th>Dátum</th>
       </tr>
 
-      <ng-container *ngFor="let i of (bandActivitiesData$ | async)?.activities">
+      <ng-container *ngFor='let i of (bandActivitiesData$ | async)?.["activities-heart"]'>
 
-        <tr>{{ i?.activityName }}
-          <td>{{ i?.activityName }} </td>
-          <td>{{ i?.activityName }} </td>
+        <tr>{{ i['dateTime'] }}
+          <td>{{ i['dateTime'] }} </td>
+          <td>{{ i['dateTime'] }} </td>
         </tr>
-        <tr>{{ i?.activityName }}
-          <td>{{ i?.activityName }} </td>
-          <td>{{ i?.activityName }} </td>
+        <tr>{{ i['dateTime'] }}
+          <td>{{ i['dateTime'] }} </td>
+          <td>{{ i['dateTime'] }} </td>
         </tr>
-        <tr>{{ i?.activityName }}
-          <td>{{ i?.activityName }} </td>
-          <td>{{ i?.activityName }} </td>
+        <tr>{{ i['dateTime'] }}
+          <td>{{ i['dateTime'] }} </td>
+          <td>{{ i['dateTime'] }} </td>
         </tr>
 
       </ng-container>
@@ -134,7 +134,9 @@
 </div>
 
 
-
+<ng-container *ngFor='let i of ((bandActivitiesData$ | async))?.["activities-heart"] '>
+ {{ i['dateTime'] }}
+</ng-container>
 
 
 

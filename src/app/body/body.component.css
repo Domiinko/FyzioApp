@@ -44,3 +44,12 @@ th{
 /*  position: relative;*/
 /*  top:50px;*/
 /*}*/
+.title{
+  color: white;
+}
+.first_line{
+  color: white;
+}
+tr, th, td {
+  color: white;
+}

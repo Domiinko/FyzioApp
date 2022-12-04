@@ -13,6 +13,8 @@ export class BodyComponent implements OnInit {
   fyzioData: any;
   fyzioData$: any;
 
+  "jano-fero": any;
+
   private bandPhysioData$$: BehaviorSubject<BandData[] | undefined> =new BehaviorSubject<BandData[] | undefined>([] );
   readonly bandPhysioData$: Observable<BandData[] | undefined> =this.bandPhysioData$$.asObservable();
 
@@ -25,6 +27,7 @@ export class BodyComponent implements OnInit {
 
  /* private ringPhysioData$$: BehaviorSubject<RingData | null> =new BehaviorSubject<RingData | null>(null);
   readonly ringPhysioData$: Observable<RingData | null> =this.ringPhysioData$$.asObservable();*/
+
 
   constructor(private fyzioDataService: FyzioDataService) {
   }

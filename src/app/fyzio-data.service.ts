@@ -12,7 +12,7 @@ export class FyzioDataService {
   urlRingData: string = 'http://localhost:3000/RingData';
   constructor(private http: HttpClient) { }
 
-  access_token = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMzkyVzMiLCJzdWIiOiJCOEhQNFoiLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJybG9jIHJhY3QgcmhyIHJudXQiLCJleHAiOjE2NzAwMTE2NDIsImlhdCI6MTY2OTk4Mjg0Mn0.e2tYTMAi-DUpPyNPb3fpU0EmdFzRI15nObesWtusTFE"
+  access_token = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMzkyVzMiLCJzdWIiOiJCOEhQNFoiLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJybG9jIHJhY3QgcmhyIHJudXQiLCJleHAiOjE2NzAxODU4ODAsImlhdCI6MTY3MDE1NzA4MH0.2j-O2fRgRxACAq-TQgHoqEXnVL7sEW9tkO5aM3c2Dvs"
 
   requestOptions = {
     headers: {"Authorization": "Bearer " + this.access_token}
@@ -22,8 +22,8 @@ export class FyzioDataService {
     return this.http.get('https://api.fitbit.com/1/user/-/activities.json', this.requestOptions)
   }
 
-  getBandData(): Observable<BandData[] | undefined>{
-    return this.http.get<BandData[] | undefined>('https://api.fitbit.com/1/user/-/activities/list.json?afterDate=2019-01-01&sort=asc&offset=0&limit=2', this.requestOptions);
+  getBandData(): Observable<any>{
+    return this.http.get<any>('https://api.fitbit.com/1/user/B8HP4Z/activities/heart/date/2022-12-03/2022-12-04.json', this.requestOptions);
   }
 
   getRingData(): Observable<RingData[]>{
