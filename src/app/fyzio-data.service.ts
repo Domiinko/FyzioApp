@@ -12,7 +12,7 @@ export class FyzioDataService {
   urlRingData: string = 'http://localhost:3000/RingData';
   constructor(private http: HttpClient) { }
 
-  access_token = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMzkyVzMiLCJzdWIiOiJCOEhQNFoiLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJybG9jIHJhY3QgcmhyIHJudXQiLCJleHAiOjE2NzAxODU4ODAsImlhdCI6MTY3MDE1NzA4MH0.2j-O2fRgRxACAq-TQgHoqEXnVL7sEW9tkO5aM3c2Dvs"
+  access_token = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMzkyVzMiLCJzdWIiOiJCOEhQNFoiLCJpc3MiOiJGaXRiaXQiLCJ0eXAiOiJhY2Nlc3NfdG9rZW4iLCJzY29wZXMiOiJybG9jIHJociByYWN0IHJudXQiLCJleHAiOjE2NzAzNDQ0OTcsImlhdCI6MTY3MDMxNTY5N30.PzPhxSRMMrWUADJ-hygZSXWw8PaEaCUZPY8BNQ_uzDY"
 
   requestOptions = {
     headers: {"Authorization": "Bearer " + this.access_token}
