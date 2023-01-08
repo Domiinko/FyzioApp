@@ -25,6 +25,9 @@ export class BodyComponent implements OnInit {
   private bandActivitiesData$$: BehaviorSubject<any> =new BehaviorSubject<any>(null );
   readonly bandActivitiesData$: Observable<any> =this.bandActivitiesData$$.asObservable();
 
+  private watchActivitiesData$$: BehaviorSubject<any> =new BehaviorSubject<any>(null );
+  readonly watchActivitiesData$: Observable<any> =this.watchActivitiesData$$.asObservable();
+
  /* private ringPhysioData$$: BehaviorSubject<RingData | null> =new BehaviorSubject<RingData | null>(null);
   readonly ringPhysioData$: Observable<RingData | null> =this.ringPhysioData$$.asObservable();*/
 
@@ -43,6 +46,11 @@ export class BodyComponent implements OnInit {
     this.fyzioDataService.getBandData().subscribe((result: any)=>{
       console.log(result);
       this.bandActivitiesData$$.next(result);
+    });
+
+    this.fyzioDataService.getWatchData().subscribe((result: any)=>{
+      console.log(result);
+      this.watchActivitiesData$$.next(result);
     })
 
     this.fyzioDataService.getRingData().subscribe(

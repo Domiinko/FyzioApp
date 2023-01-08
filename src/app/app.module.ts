@@ -11,6 +11,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { FooterComponent } from './footer/footer.component';
 import { SliderComponent } from './slider/slider.component';
+import { ParticlesModule } from 'angular-particle';
+import { NavComponent } from './nav/nav.component';
+import { SmartBandInfoComponent } from './smart-band-info/smart-band-info.component';
+import { SmartWatchInfoComponent } from './smart-watch-info/smart-watch-info.component';
+import { SmartScaleInfoComponent } from './smart-scale-info/smart-scale-info.component';
+import { SmartBarometerInfoComponent } from './smart-barometer-info/smart-barometer-info.component';
 
 
 @NgModule({
@@ -21,15 +27,20 @@ import { SliderComponent } from './slider/slider.component';
     BodyComponent,
     WelcomeComponent,
     FooterComponent,
-    SliderComponent
+    SliderComponent,
+    NavComponent,
+    SmartBandInfoComponent,
+    SmartWatchInfoComponent,
+    SmartScaleInfoComponent,
+    SmartBarometerInfoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     NgbModule,
+    MatGridListModule,
 
-    MatGridListModule
   ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [],

@@ -1,255 +1,171 @@
+<div class="container is-desktop" id="bcg" style="margin-top: 5%">
+<div class="columns is-desktop">
+  <div class="column">
+    <app-slider></app-slider>
+  </div>
 
-
-<div class="container">
-  <div class="columns is-desktop">
-    <div class="column">
-      <app-slider></app-slider>
-    </div>
-    <div class="column">
-      <div class="card" style="width: 50vmin; text-align: left" >
-        <header class="card-header">
-          <p class="card-header-title">
-           Inteligentné zariadenia
-          </p>
-        </header>
-        <div class="card-content">
-          <div class="content">
-            Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus.
-            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
-            Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus.
-            Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.
-          </div>
+  <div class="column">
+    <div class="card" style="width: 50vmin; text-align: left">
+      <header class="card-header">
+        <p class="card-header-title">
+          Inteligentné zariadenia
+        </p>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget
+          metus.
+          Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur
+          purus sit amet fermentum.
+          Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget
+          metus.
+          Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur
+          purus sit amet fermentum.
         </div>
       </div>
     </div>
   </div>
-
-
-<div class="columns is-desktop">
-  <div class="column" >
-    <tbody>
-    <table>
-      <tr class="first_line">
-        <th>ID</th>
-        <th>Full Name</th>
-        <th>City</th>
-      </tr>
-      <ng-container *ngFor="let i of ((ringPhysioData$ | async))">
-        <tr>
-          <td>{{i.id}}</td>
-          <td>{{i.name}}</td>
-          <td>{{i.city}}</td>
-        </tr>
-      </ng-container>
-    </table>
-    </tbody>
-  </div>
-  <div class="column" >
-    <tbody>
-    <table>
-      <tr class="first_line">
-        <th>ID</th>
-        <th>Full Name</th>
-        <th>City</th>
-      </tr>
-      <ng-container *ngFor="let i of ((ringPhysioData$ | async))">
-        <tr>
-          <td>{{i.id}}</td>
-          <td>{{i.name}}</td>
-          <td>{{i.city}}</td>
-        </tr>
-      </ng-container>
-    </table>
-    </tbody>
-  </div>
-</div>
-<div class="columns is-desktop">
-  <div class="column" >
-    <tbody>
-    <table>
-      <tr class="first_line">
-        <th class="title"></th>
-        <th class="title">FitBit Charge2 Data</th>
-        <th class="title"></th>
-      </tr>
-      <tr class="first_line">
-        <th>Dátum</th>
-        <th>Hodnota tepu srdca</th>
-        <th>Činnosť</th>
-      </tr>
-
-      <ng-container *ngFor='let i of (bandActivitiesData$ | async)?.["activities-heart"]'>
-
-        <tr>{{ i['dateTime'] }}
-          <td>{{ i['value'].restingHeartRate }} </td>
-          <td> Odpočinok </td>
-        </tr>
-        <tr>{{ i['dateTime'] }}
-          <td>{{ i['value'].restingHeartRate }} </td>
-          <td>Odpočinok </td>
-        </tr>
-        <tr>{{ i['dateTime'] }}
-          <td>{{ i['value'].restingHeartRate }} </td>
-          <td>Odpočinok </td>
-        </tr>
-
-      </ng-container>
-    </table>
-    </tbody>
-  </div>
-  <div class="column" >
-    <tbody>
-    <table>
-      <tr class="first_line">
-        <th class="title"></th>
-        <th class="title">FitBit Versa2 Data</th>
-        <th class="title"></th>
-      </tr>
-      <tr class="first_line">
-        <th>Činnosť</th>
-        <th>Hodnota</th>
-        <th>Dátum</th>
-      </tr>
-
-      <ng-container *ngFor='let i of (bandActivitiesData$ | async)?.["activities-heart"]'>
-
-        <tr>{{ i['dateTime'] }}
-          <td>{{ i['dateTime'] }} </td>
-          <td>{{ i['dateTime'] }} </td>
-        </tr>
-        <tr>{{ i['dateTime'] }}
-          <td>{{ i['dateTime'] }} </td>
-          <td>{{ i['dateTime'] }} </td>
-        </tr>
-        <tr>{{ i['dateTime'] }}
-          <td>{{ i['dateTime'] }} </td>
-          <td>{{ i['dateTime'] }} </td>
-        </tr>
-
-      </ng-container>
-    </table>
-    </tbody>
-  </div>
 </div>
 </div>
+<br>
+
+<div class="container is-desktop" style="margin-top: 3%" id="scroll" >
 
 
-<ng-container *ngFor='let i of ((bandActivitiesData$ | async))?.["activities-heart"] '>
- {{ i['dateTime'] }}
-</ng-container>
+  <div class="columns is-desktop">
 
+    <div class="column">
+      Oura ring
+      <table>
+        <thead>
+        <tr class="first_line">
+          <th>ID</th>
+          <th>Full Name</th>
+          <th>City</th>
+        </tr>
+        </thead>
+        <tbody>
+        <ng-container *ngFor="let i of ((ringPhysioData$ | async))">
+          <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.city}}</td>
+          </tr>
+        </ng-container>
+        </tbody>
+      </table>
+    </div>
 
+    <div class="column">
+      iHealth Push
+      <table>
+        <thead>
+        <tr class="first_line">
+          <th>Dátum</th>
+          <th>Sys</th>
+          <th>Dia</th>
+        </tr>
+        </thead>
+        <tbody>
 
-<!--<div class="container">-->
-<!--  <div class="row">-->
-<!--    <div class=".col-6 .col-sm-3">-->
-<!--      <tbody>-->
-<!--      <table>-->
-<!--        <tr class="first_line">-->
-<!--          <th>ID</th>-->
-<!--          <th>Full Name</th>-->
-<!--          <th>City</th>-->
-<!--        </tr>-->
-<!--        <ng-container *ngFor="let i of ((ringPhysioData$ | async))">-->
-<!--          <tr>-->
-<!--            <td>{{i.id}}</td>-->
-<!--            <td>{{i.name}}</td>-->
-<!--            <td>{{i.city}}</td>-->
-<!--          </tr>-->
-<!--        </ng-container>-->
-<!--      </table>-->
-<!--      </tbody>-->
-<!--    </div>-->
-<!--    <div class=".col-6 .col-sm-3">-->
-<!--      <tbody>-->
-<!--      <table>-->
-<!--        <tr class="first_line">-->
-<!--          <th>ID</th>-->
-<!--          <th>Full Name</th>-->
-<!--          <th>City</th>-->
-<!--        </tr>-->
-<!--        <ng-container *ngFor="let i of ((ringPhysioData$ | async))">-->
-<!--          <tr>-->
-<!--            <td>{{i.id}}</td>-->
-<!--            <td>{{i.name}}</td>-->
-<!--            <td>{{i.city}}</td>-->
-<!--          </tr>-->
-<!--        </ng-container>-->
-<!--      </table>-->
-<!--      </tbody>-->
+          <tr>
+            <td>11.04.2021</td>
+            <td>123</td>
+            <td>76</td>
+          </tr>
+          <tr>
+            <td>11.04.2021</td>
+            <td>130</td>
+            <td>83</td>
+          </tr>
+          <tr>
+            <td>12.04.2021</td>
+            <td>129</td>
+            <td>91</td>
+          </tr>
+          <tr>
+            <td>13.04.2021</td>
+            <td>119</td>
+            <td>72</td>
+          </tr>
+          <tr>
+            <td>13.04.2021</td>
+            <td>111</td>
+            <td>74</td>
+          </tr>
+          <tr>
+            <td>29.12.2022</td>
+            <td>149</td>
+            <td>109</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-<!--    </div>-->
-<!--&lt;!&ndash;  <hr>&ndash;&gt;-->
-<!--&lt;!&ndash;  <div class="row">&ndash;&gt;-->
-<!--    <div class="w-100"></div>-->
-<!--    <div class=".col-6 .col-sm-3">-->
-<!--      <tbody>-->
-<!--      <table>-->
-<!--        <tr class="first_line">-->
-<!--          <th class="title"></th>-->
-<!--          <th class="title">FitBit Charge2 Data</th>-->
-<!--          <th class="title"></th>-->
-<!--        </tr>-->
-<!--        <tr class="first_line">-->
-<!--          <th>Činnosť</th>-->
-<!--          <th>Hodnota</th>-->
-<!--          <th>Dátum</th>-->
-<!--        </tr>-->
+  </div>
+  <div class="columns is-desktop">
+    <div class="column">
+      FitBit Charge2 Data
+      <table>
+        <thead>
+        <tr class="first_line">
+          <th>Dátum</th>
+          <th>Tep srdca</th>
+          <th>Činnosť</th>
+        </tr>
+        </thead>
+        <tbody>
+        <ng-container *ngFor='let i of (bandActivitiesData$ | async)?.["activities-heart"]'>
 
-<!--        <ng-container *ngFor="let i of (bandActivitiesData$ | async)?.activities">-->
+          <tr>{{ i['dateTime'] }}
+            <td>{{ i['value'].restingHeartRate }} </td>
+            <td> Odpočinok</td>
+          </tr>
+          <tr>{{ i['dateTime'] }}
+            <td>{{ i['value'].restingHeartRate }} </td>
+            <td>Odpočinok</td>
+          </tr>
+          <tr>{{ i['dateTime'] }}
+            <td>{{ i['value'].restingHeartRate }} </td>
+            <td>Odpočinok</td>
+          </tr>
+        </ng-container>
+        </tbody>
+      </table>
 
-<!--          <tr>{{ i?.activityName }}-->
-<!--            <td>{{ i?.activityName }} </td>-->
-<!--            <td>{{ i?.activityName }} </td>-->
-<!--          </tr>-->
-<!--          <tr>{{ i?.activityName }}-->
-<!--            <td>{{ i?.activityName }} </td>-->
-<!--            <td>{{ i?.activityName }} </td>-->
-<!--          </tr>-->
-<!--          <tr>{{ i?.activityName }}-->
-<!--            <td>{{ i?.activityName }} </td>-->
-<!--            <td>{{ i?.activityName }} </td>-->
-<!--          </tr>-->
+    </div>
+    <div class="column">
+      FitBit Versa2 Data
+      <table>
+        <thead>
+        <tr class="first_line">
+          <th>Dátum</th>
+          <th>Tep srdca</th>
+          <th>Činnosť</th>
+        </tr>
+        </thead>
+        <tbody>
+        <ng-container *ngFor='let i of (watchActivitiesData$ | async)?.["activities-heart"]'>
+          <tr>{{ i['dateTime'] }}
+            <td>{{ i['value'].restingHeartRate }} </td>
+            <td> Odpočinok</td>
+          </tr>
+          <tr>{{ i['dateTime'] }}
+            <td>{{ i['value'].restingHeartRate }} </td>
+            <td>Odpočinok</td>
+          </tr>
+          <tr>{{ i['dateTime'] }}
+            <td>{{ i['value'].restingHeartRate }} </td>
+            <td>Odpočinok</td>
+          </tr>
+        </ng-container>
+        </tbody>
+      </table>
 
-<!--        </ng-container>-->
-<!--      </table>-->
-<!--      </tbody>-->
-<!--    </div>-->
-<!--    <div class=".col-6 .col-sm-3">-->
-<!--      <tbody>-->
-<!--      <table>-->
-<!--        <tr class="first_line">-->
-<!--          <th class="title"></th>-->
-<!--          <th class="title">FitBit Versa2 Data</th>-->
-<!--          <th class="title"></th>-->
-<!--        </tr>-->
-<!--        <tr class="first_line">-->
-<!--          <th>Činnosť</th>-->
-<!--          <th>Hodnota</th>-->
-<!--          <th>Dátum</th>-->
-<!--        </tr>-->
-
-<!--        <ng-container *ngFor="let i of (bandActivitiesData$ | async)?.activities">-->
-
-<!--          <tr>{{ i?.activityName }}-->
-<!--            <td>{{ i?.activityName }} </td>-->
-<!--            <td>{{ i?.activityName }} </td>-->
-<!--          </tr>-->
-<!--          <tr>{{ i?.activityName }}-->
-<!--            <td>{{ i?.activityName }} </td>-->
-<!--            <td>{{ i?.activityName }} </td>-->
-<!--          </tr>-->
-<!--          <tr>{{ i?.activityName }}-->
-<!--            <td>{{ i?.activityName }} </td>-->
-<!--            <td>{{ i?.activityName }} </td>-->
-<!--          </tr>-->
-
-<!--        </ng-container>-->
-<!--      </table>-->
-<!--      </tbody>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
-<!--<br>-->
-<!--<hr>-->
+    </div>
+  </div>
+</div>
+<br>
+<hr>
+<br>
 

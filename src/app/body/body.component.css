@@ -1,55 +1,108 @@
 .stay{;
   background-color: white;
 }
+#bcg{
+  background-color: rgba(169, 164, 164, 0.125);
+}
 .first_line{
-  background: rgba(147, 112, 219, 0.33);
+  /*background: rgba(238, 231, 231, 0.33);*/
   position: relative;
   border-radius: 5px;
 }
 table{
   position: relative;
-  width: 50vmin;
+  min-width:40vmin;
   border-collapse: collapse;
   align-items: center;
-  background: rgba(147, 112, 219, 0.34);
+  background: rgb(255, 255, 255);
+
   border-radius: 5px;
-  /*z-index: 2;*/
+  margin-left:auto;
+  margin-right:auto;
+  text-align: center;
+  table-layout: fixed;
+
+  /*border: 1px solid black;*/
+  /*display: block;*/
+  /*box-sizing: border-box;*/
 
 }
 tbody{
   position: relative;
+  height: 15vh;
   text-align: center;
+  display: block;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-spacing: 5vw 1px;
+  padding: 10px;
+}
 
+.container{
+  background-color: rgba(238, 231, 231, 0.85);
+  position: relative;
+  margin-left:auto;
+  margin-right:auto;
+  border-collapse: collapse;
+  max-width: 100%;
 }
-td,th{
-  z-index: 1;
-  color:black;
+thead{
+  background-color: rgba(201, 196, 196, 0.91);
+  position: relative;
+  display: block;
+  align-items: center;
+  text-align: center;
 }
+
 th{
-  font-weight: bolder;
+ font-weight: bolder;
 }
 .title{
-  text-align: center;
+ text-align: center;
 }
 .card{
   background-color: rgba(255, 255, 255, 0.5);
-  /*height: 30vh;*/
   height: 30vmin;
+  margin-left:auto;
+  margin-right:auto;
 
+}
+.column{
+  position: relative;
+  text-align: center;
+}
+.card-content{
+  position: relative;
 }
 .content{
   color:black;
+
+  /*word-wrap    : break-word;*/
+  /*overflow-wrap: break-word;*/
 }
-/*.columns is-mobile{*/
-/*  position: relative;*/
-/*  top:50px;*/
-/*}*/
+.columns{
+  position: relative;
+  /*top:50px;*/
+  /*background-color: rgba(255, 255, 255);*/
+  /*overflow-wrap: break-word;*/
+  padding: 2%;
+}
 .title{
-  color: white;
+  color: black;
 }
 .first_line{
-  color: white;
+  color: black;
 }
-tr, th, td {
-  color: white;
+ td, th {
+  color: black;
+   border: 1px solid black;
+   border: hidden;
+  padding: 0.5vh 5vh;
+
+}
+
+.scroll{
+  display: block;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }

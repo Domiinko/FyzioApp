@@ -1,3 +1,7 @@
 div{
-  background: rgb(103, 75, 157);
+  background: rgb(238, 231, 231);
 }
+selection{
+  border-bottom: black;
+}
+

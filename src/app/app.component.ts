@@ -19,7 +19,8 @@ export class AppComponent {
 
   constructor(private elementRef: ElementRef) {}
   ngAfterViewInit() {
-    this.elementRef.nativeElement.ownerDocument
-      .body.style.background = 'https://i.cbc.ca/1.3638138.1479852274!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_780/milky-way-concordia-pakistan.jpg';
+    this.elementRef.nativeElement.ownerDocument.body.style.background = './asstes/vid.mp4';
+      // .body.style.background = 'https://i.cbc.ca/1.3638138.1479852274!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_780/milky-way-concordia-pakistan.jpg';//
+
   }
 }

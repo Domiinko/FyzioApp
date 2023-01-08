@@ -1,13 +1,13 @@
 .footer{
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100vw !important;
-  background: rgb(103, 75, 157);
+  background: rgb(238, 231, 231);
   padding: 10px;
 }
 p{
-  color: white;
+  color: black;
 }
 strong{
-  color: white;
+  color: black;
 }
